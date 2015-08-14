@@ -1,0 +1,36 @@
+<form action="" method="get" class="search-form">
+
+	<input type="text" id="search-input"></input>
+
+	<button type="submit" id="search-button">Find a Space!</button>
+
+</form>
+
+
+<iframe src="" id="map-frame" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+	
+</iframe>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	$('#search-button').click(function (event) {
+		event.preventDefault();
+		var locationToSearch = $('#search-input').val();
+		var url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyD9gEpTEKcOtamDRPVqD4yqYw0s-o1oknY&q=" + locationToSearch;
+		$.get(url, handleLocation)
+	});	
+
+	function handleLocation (location) {
+		console.log('Request done!', location);
+		showMap(location);
+
+	function showMap (location) {
+		$('#map-frame').attr('src', location)
+		};
+	};
+
+
+</script>
