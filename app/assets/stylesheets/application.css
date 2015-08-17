@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+.gm-style:nth-child(10){
+	display:none;
+}
+
+#map-frame {
+	border:0; 
+	position: relative;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+.hideForm {
+	z-index: 1;
+}
+
+.showMap {
+	z-index: 2;
+}
