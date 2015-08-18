@@ -1,1 +1,58 @@
-holaaa
+<div id="back-header-img">
+	<h1><%= @cowork.name %></h1>	
+</div>
+
+<div class="box-wraper">
+	
+	<div id="sub-header">
+		<div id="cowork-characteristics"><%= @cowork.characteristics %></div>
+
+		<div id="cowork-logo">
+			<img src="https://sharedesk.net/api/httpdocs/media/users/profile/f8/c1/f2//f8c1f23d6a8d8d7904fc0ea8e066b3bb-large.png">
+		</div>
+	</div>
+
+
+		<div class="info-box">
+			<div>
+				<strong>Details: </strong>
+			</div>
+			<div><%= truncate @cowork.description, length: 500 %>
+					  		<%= link_to 'Read More', @cowork.description %>
+			</div>
+		</div>
+
+
+
+		<div class="info-box">
+			<div>
+				<strong>Gallery: </strong>
+			</div>
+		</div>
+
+
+
+
+	<div class="info-box" style="padding-top: 30px;">
+		<div>
+			<strong>Services: </strong>
+		</div>
+		<div><%= @cowork.services %></div>
+	</div>
+
+
+
+	<div class="info-box" style="padding-top: 30px;">
+		<div>
+			<strong>Companies: </strong>
+		</div>	
+		<div><%= @cowork.companies %></div>
+	</div>
+</div>
+
+
+<div class="footer">
+	<div class="social-icons">
+		<img src="http://www.co-padres.net/images/facebook-grey.png" width="40" height="40">	
+	</div>
+</div>

@@ -14,10 +14,6 @@
  *= require_self
  */
 
-.gm-style:nth-child(10){
-	display:none;
-}
-
 #map-frame {
 	border:0; 
 	position: relative;
@@ -34,4 +30,83 @@
 
 .showMap {
 	z-index: 2;
+}
+
+.info-box {
+	width: 520px;
+	margin-right: -75px;
+	padding: 75px 0px 0px 100px;
+	background-color: white;
+	background-clip: content-box;
+	word-break: break-all;
+	display: inline-block;
+}
+
+.info-box div {
+	padding: 10px 10px 10px 10px;
+	color: #746e65;
+	font-weight: 300;
+	font-family: "Open Sans",sans-serif,arial rounded mt bold;
+}
+
+.info-box strong {
+	font-family: "Open Sans",sans-serif,arial rounded mt bold;
+	font-size: 1.25rem;
+	font-weight: 300;
+    letter-spacing: 0
+}
+
+#back-header-img {
+	background-image: url("http://www.utopicus.es/sites/default/files/styles/node_slide/public/images/pages/col1.jpg?itok=KorP1Dr3");
+	width: 100%;
+	height: 365px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#back-header-img h1 {
+	color: white;
+	padding-top: 150px;
+	font-family: courier new;
+	font-size: 50px;
+	opacity: 1;
+}
+
+#cowork-characteristics {
+	font-family: "Open Sans",sans-serif,arial rounded mt bold;
+	color: #746e65;
+	font-weight: 300;
+	font-size: 1.5rem;	
+	padding: 80px 0px 50px 0px;
+	word-wrap: break-word;
+    word-break: break-word;	
+}
+
+#sub-header {
+	background-color: white;
+	height: 300px;	
+	font-family: "Open Sans",sans-serif,arial rounded mt bold;
+	color: #746e65;
+	font-weight: 300;
+	font-size: 1.2rem;	
+	text-align: center;
+}
+
+.footer {
+	background-color: #E6E6E6;
+	height: 200px;
+}
+
+.box-wraper {
+	background-color: #E6E6E6;
+}
+
+.social-icons {
+	padding: 100px 0px 0px 25px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
 }

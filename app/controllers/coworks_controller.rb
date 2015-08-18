@@ -4,6 +4,6 @@ class CoworksController < ApplicationController
 	end
 
 	def show
-		@coworks = Cowork.all
+		@cowork = Cowork.find params[:id]
 	end
 end
