@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150814082046) do
+ActiveRecord::Schema.define(version: 20150818095406) do
 
   create_table "coworks", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.text     "description"
+    t.text     "services"
+    t.text     "companies"
+    t.decimal  "latitude",        precision: 10, scale: 6
+    t.decimal  "longitude",       precision: 10, scale: 6
+    t.text     "characteristics"
+    t.text     "name"
   end
 
 end

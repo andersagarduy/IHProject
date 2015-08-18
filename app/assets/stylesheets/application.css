@@ -29,6 +29,7 @@
 
 .hideForm {
 	z-index: 1;
+	display: none;
 }
 
 .showMap {
