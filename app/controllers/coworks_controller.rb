@@ -6,4 +6,9 @@ class CoworksController < ApplicationController
 	def show
 		@cowork = Cowork.find params[:id]
 	end
+
+	def index_data
+		@coworks = Cowork.all
+		render json: @coworks
+	end
 end
