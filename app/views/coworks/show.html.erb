@@ -4,25 +4,33 @@
 
 <div class="box-wraper">
 	
-	<div id="sub-header">
-		<div id="cowork-characteristics"><%= @cowork.characteristics %></div>
+		<div id="sub-header">
+			<div id="cowork-characteristics"><%= @cowork.characteristics.html_safe %></div>
 
-		<div id="cowork-logo">
-			<img src="https://sharedesk.net/api/httpdocs/media/users/profile/f8/c1/f2//f8c1f23d6a8d8d7904fc0ea8e066b3bb-large.png">
+			<div id="cowork-logo">
+				<img src="https://sharedesk.net/api/httpdocs/media/users/profile/f8/c1/f2//f8c1f23d6a8d8d7904fc0ea8e066b3bb-large.png">
+			</div>
 		</div>
-	</div>
 
-
+	<div class="content-box">
+	<div id="hola">
 		<div class="info-box">
 			<div>
 				<strong>Details: </strong>
 			</div>
-			<div><%= truncate @cowork.description, length: 500 %>
-					  		<%= link_to 'Read More', @cowork.description %>
+			
+			<a class="expander" href="">Read More!</a>
+			
+			<div class="content">
+				<%= @cowork.description.html_safe %>
 			</div>
 		</div>
 
-
+		<script type="text/javascript">
+			$('.expander').click(function() {
+	    		$('.content').removeClass();
+		});	
+		</script>
 
 		<div class="info-box">
 			<div>
@@ -33,26 +41,34 @@
 
 
 
-	<div class="info-box" style="padding-top: 30px;">
-		<div>
-			<strong>Services: </strong>
+		<div class="info-box" style="padding-top: 30px;">
+			<div>
+				<strong>Services: </strong>
+			</div>
+			<div><%= @cowork.services.html_safe %></div>
 		</div>
-		<div><%= @cowork.services %></div>
+
+
+
+		<div class="info-box" style="padding-top: 30px;">
+			<div>
+				<strong>Companies: </strong>
+			</div>	
+			<div><%= @cowork.companies.html_safe %></div>
+		</div>
 	</div>
-
-
-
-	<div class="info-box" style="padding-top: 30px;">
-		<div>
-			<strong>Companies: </strong>
-		</div>	
-		<div><%= @cowork.companies %></div>
-	</div>
+		
+	</div>	
 </div>
 
 
 <div class="footer">
-	<div class="social-icons">
-		<img src="http://www.co-padres.net/images/facebook-grey.png" width="40" height="40">	
-	</div>
+	
+	<img src="/assets/Logo Chameleon Vectorizado.png" width="254" height="56" class="footer-logo">
+	
+	<p class="copyright">2015 | All Rights Reserved to <a href="http://chameleonstudios.es/">Chameleon Studios</a></p>
+
+		<a href="facebook.com" class="social-icons">
+			<img src="/assets/flat-icon-facebook-150x15.jpg" border="0" onmouseover="this.src='http://6znr8g7i2u1e6urycg61i18w.wpengine.netdna-cdn.com/wp-content/uploads/2013/12/flat-icon-facebook-150x150.png'" onmouseout="this.src='/assets/flat-icon-facebook-150x15.jpg'", width="40" height="40" class="social-icons" />
+		</a>
 </div>
