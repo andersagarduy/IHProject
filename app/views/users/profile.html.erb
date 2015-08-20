@@ -1,22 +1,13 @@
+<h2><%= current_user.name %>!</h2>
+<div id="top_bar">
+	<p><%= link_to 'Sign out', destroy_user_session_path, method: 'DELETE' %></p>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-<div id="top_bar">
-  <% if user_signed_in? %>
-    <p><%= link_to 'Sign out', destroy_user_session_path, method: 'DELETE' %></p>
-  <% else %>
-    <p>
-      <%= link_to 'Sign_up', new_user_registration_path %> | 
-      <%= link_to 'Log_in', new_user_session_path %>
-    </p>
-  <% end %>
-</div>
-
-
-
 
 <style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
@@ -50,6 +41,3 @@ google.maps.event.addListener(searchBox, 'places_changed', function() {
 });
 
 </script>
-
-
-

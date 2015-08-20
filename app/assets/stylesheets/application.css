@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+#search-button {
+	height: 45px;
+	width: 130px;	
+}
+
+#where-am-i {
+	height: 45px;
+}
 
 #map-frame {
 	border:0; 
@@ -56,15 +64,10 @@
     letter-spacing: 0
 }
 
-#hola {
-	width: 85%;
-	margin: 0 auto;
-}
-
 .row {
 	background-color: #E6E6E6;
    	margin-left: -15px;
-   	margin-right: -15px;  	
+   	margin-right: -15px; 	 	
 }
 
 #back-header-img {
@@ -74,6 +77,11 @@
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+#top_bar {
+	float: right;
+	margin: 25px 25px 0px 0px;
 }
 
 #back-header-img h1 {
@@ -134,8 +142,7 @@
 }
 
 .social-icons {
-	float: right;
-	margin: 40px 350px 20px 0px;
+	margin: 70px 350px 20px 0px;
 }
 
 .footer-logo {
@@ -149,6 +156,25 @@
 
 .expander {
 	padding: 5px 5px 5px 5px;
+}
+
+.filter-input {
+	height: 34px;
+}
+
+.workers {
+	text-align: center;
+	margin: 50px 0px 0px 0px;
+}
+
+.filter-form {
+	text-align: center;
+	margin: 50px 0px 0px 0px;
+}
+
+#search-input {
+	height: 45px;
+	color: black;
 }
 
 * {

@@ -1,4 +1,7 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 
 <div id="back-header-img">
 	<h1><%= @cowork.name %></h1>	
@@ -58,18 +61,52 @@
 				<div><%= @cowork.companies.html_safe %></div>
 			</div>		
 		</div>
-	</div>	
+	</div>
+
+	
+  <% if user_signed_in? %>
+    	<div class="row">
+		<div class="col-md-12">
+			<div class="workers">
+				<h1>People that work in <%= @cowork.name %></h1>
+			</div>	
+			
+			<div class="filter-form">
+				<input type="text" placeholder="Name:" class="filter-input"></input>
+	  			<div class="btn-group">
+  				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			Job <span class="caret"></span>
+  				</button>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">Programmers</a></li>
+				    <li><a href="#">Engineers</a></li>
+				    <li><a href="#">Marketing</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Separated link</a></li>
+				  </ul>
+				</div>
+	  			<button type="button" class="btn btn-success">Search!</button>
+			</div>
+		</div>
+	</div>
+  <% else %>
+  
+  <% end %>
 
 
+
+	
 	<div class="row">
-		<div class="col-md-5">
-				<img src="/assets/Logo Chameleon Vectorizado.png" width="254" height="56" class="footer-logo">
-					
-				<p class="copyright">2015 | All Rights Reserved to <a href="http://chameleonstudios.es/">Chameleon Studios</a></p>
-		</div>		
-		<div class="col-md-7">
-				<a href="https://www.facebook.com/chameleonstudiosbilbao?fref=ts" class="social-icons">
-				<img src="/assets/flat-icon-facebook-150x15.jpg" border="0" onmouseover="this.src='http://6znr8g7i2u1e6urycg61i18w.wpengine.netdna-cdn.com/wp-content/uploads/2013/12/flat-icon-facebook-150x150.png'" onmouseout="this.src='/assets/flat-icon-facebook-150x15.jpg'", width="40" height="40" class="social-icons" /></a>
+		<div class="footer">	
+			<div class="col-md-5">
+					<img src="/assets/Logo Chameleon Vectorizado.png" width="254" height="56" class="footer-logo">
+						
+					<p class="copyright">2015 | All Rights Reserved to <a href="http://chameleonstudios.es/">Chameleon Studios</a></p>
+			</div>		
+			<div class="col-md-7">
+					<a href="https://www.facebook.com/chameleonstudiosbilbao?fref=ts" class="social-icons">
+					<img src="/assets/flat-icon-facebook-150x15.jpg" border="0" onmouseover="this.src='http://6znr8g7i2u1e6urycg61i18w.wpengine.netdna-cdn.com/wp-content/uploads/2013/12/flat-icon-facebook-150x150.png'" onmouseout="this.src='/assets/flat-icon-facebook-150x15.jpg'", width="40" height="40" class="social-icons" /></a>
+			</div>	
 		</div>	
 	</div>	
 </div>
