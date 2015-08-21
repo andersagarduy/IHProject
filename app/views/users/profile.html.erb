@@ -1,13 +1,26 @@
-<h2><%= current_user.name %>!</h2>
-<div id="top_bar">
-	<p><%= link_to 'Sign out', destroy_user_session_path, method: 'DELETE' %></p>
-</div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<div class="row">	
+	<div id="top_bar">
+		<div class="btn-group">
+		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		   	<%= current_user.name %> <span class="caret"></span>
+		  	</button>
+		  	<ul class="dropdown-menu">
+		    	<li><a href="#"><%= link_to 'Edit my Profile', edit_user_registration_path, method: 'GET' %></li>
+		    	<li role="separator" class="divider"></li>
+		    	<li><a href="#"><%= link_to 'Log out', destroy_user_session_path, method: 'DELETE' %></a></li>
+		  	</ul>
+		</div>
+		<%= link_to 'Log out', destroy_user_session_path, method: 'DELETE' %>
+	</div>
+</div>	
+
+
 
 <style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
@@ -20,7 +33,7 @@
 
 	<input type="text" id="search-input" autofocus></input>
   <button id="search-button" class="btn btn-default">Find a Space!</button>
-  <button id="where-am-i" class="btn btn-default glyphicon glyphicon-screenshot"> Near you!</button>
+  <button id="where-am-i" class="btn btn-default"><img src="/assets/Google-Maps-icon.png"></button>
 
 </form>
 

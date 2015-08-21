@@ -69,23 +69,55 @@
 		<div class="col-md-12">
 			<div class="workers">
 				<h1>People that work in <%= @cowork.name %></h1>
-			</div>	
-			
+			</div>
+
+			<div id="filter-errors">
+				
+			</div>
+
 			<div class="filter-form">
-				<input type="text" placeholder="Name:" class="filter-input"></input>
-	  			<div class="btn-group">
-  				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			Job <span class="caret"></span>
-  				</button>
-				  <ul class="dropdown-menu">
-				    <li><a href="#">Programmers</a></li>
-				    <li><a href="#">Engineers</a></li>
-				    <li><a href="#">Marketing</a></li>
-				    <li role="separator" class="divider"></li>
-				    <li><a href="#">Separated link</a></li>
-				  </ul>
-				</div>
-	  			<button type="button" class="btn btn-success">Search!</button>
+				<form action="/users-data" id="filter-form-tag">	
+					<input type="text" placeholder="Name:" name="Name" class="filter-input" id="name-filter-input" required></input>
+		  				<select name="Job" id="select-tag" required>
+			  				<% @jobs.each do |job| %>
+							    <option> <%= job %> </option>
+							<% end %>
+						</select>
+				<button type="submit" class="btn btn-success" id="filter-search">Search!</button>		
+				</form>		
+			</div>
+
+		</div>
+	</div>
+
+	  <!-- Modal -->
+	<div class="modal fade js-modal" id="myModal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <div class="modal-header">
+	        <!-- Close button -->
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span>&times;</span>
+	        </button>
+
+	        <h2 id="worker-info"></h2>
+
+	        <div>
+	        	<p id="worker-job"></p>
+	        	<p id="worker-email"></p>
+	        </div>
+	        	
+	      </div>
+
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<div class="row">
+		<div class="col-md-12">
+			<div id="filter-results">
+				
 			</div>
 		</div>
 	</div>

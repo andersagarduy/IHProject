@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :coworks
   get 'coworks_data' => "coworks#index_data"
+  post 'users-data' => "coworks#workers_data"
   root to: 'users#profile'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

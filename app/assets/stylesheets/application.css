@@ -20,15 +20,18 @@
 
 #where-am-i {
 	height: 45px;
+	width: 70px;
+	background-color: seagreen;
 }
 
-#map-frame {
-	border:0; 
-	position: relative;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
+#filter-results {
+	display: inline-block;
+	margin: 150px 0px 0px 150px;
+}
+
+#where-am-i img{
+	height: 35px;
+	width: 40px;	
 }
 
 .hideForm {
@@ -80,8 +83,14 @@
 }
 
 #top_bar {
-	float: right;
-	margin: 25px 25px 0px 0px;
+	margin: 35px 50px 0px 0px;
+	z-index: 2;
+	position: absolute;
+	right: 0;
+}
+
+#map {
+	z-index: 1;
 }
 
 #back-header-img h1 {
@@ -175,6 +184,16 @@
 #search-input {
 	height: 45px;
 	color: black;
+	width: 306px;
+}
+
+.btn-group>.btn:first-child {
+	margin-right: 30px;
+}
+
+.login_signin {
+	text-align: center;
+	margin: 180px 0px 0px 0px;
 }
 
 * {

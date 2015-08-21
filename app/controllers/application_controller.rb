@@ -8,5 +8,18 @@ class ApplicationController < ActionController::Base
 	protected
     	def configure_permitted_parameters
       	devise_parameter_sanitizer.for(:sign_up) << :name
+      	devise_parameter_sanitizer.for(:account_update) << :job
     end
+
+    private 
+
+  	def after_sign_out_path_for(resource_or_scope)
+    # If it's admin 
+     if user_signed_in? 
+        coworks_path
+    # Otherwise
+     else
+        coworks_path
+     end
+  end
 end
