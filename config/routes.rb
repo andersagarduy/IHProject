@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :coworks
   get 'coworks_data' => "coworks#index_data"
   post 'users-data' => "coworks#workers_data"
+  post 'user_json' => "users#index"
   root to: 'users#profile'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

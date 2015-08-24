@@ -13,7 +13,7 @@
 			<div id="cowork-characteristics"><%= @cowork.characteristics.html_safe %></div>
 
 			<div id="cowork-logo">
-				<img src="https://sharedesk.net/api/httpdocs/media/users/profile/f8/c1/f2//f8c1f23d6a8d8d7904fc0ea8e066b3bb-large.png">
+				<img src="/assets/coworking_circle2.jpg">
 			</div>
 		</div>
 	</div>
@@ -37,6 +37,9 @@
 			<div class="info-box">
 				<div>
 					<strong>Gallery: </strong>
+					<div id="gallery">
+						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -100,10 +103,9 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span>&times;</span>
 	        </button>
-
-	        <h2 id="worker-info"></h2>
-
-	        <div>
+			<div id="modal-info">
+	        	<h2 id="worker-info"></h2>
+	        
 	        	<p id="worker-job"></p>
 	        	<p id="worker-email"></p>
 	        </div>

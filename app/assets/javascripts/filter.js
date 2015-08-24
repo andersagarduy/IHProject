@@ -4,7 +4,13 @@ $(document).ready(function() {
 		var formObj = $(this);
 		var formURL = formObj.attr("action");
 		var formData = formObj.serializeArray();
-
+		
+		$.ajaxSetup({
+		  headers: {
+		    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+		  }
+		});
+		
 		$.ajax({
 			url: formURL,
 			type: 'POST',
@@ -12,9 +18,22 @@ $(document).ready(function() {
 			success: function(data)
 		    {
 		    	console.log(data);
+		
+		    	if (data != 'object') {
+					$('#filter-errors').html('<p>' + "Error, Usuario No Existe!" + '</p>')
+					setTimeout(function () {
+					$('#filter-errors').remove();
+				    }, 5000);	
+				}
 
 		    	data.forEach(function(worker){
+		    		
+		    		$.post("/user_json.json", formData, function(user){
+      					$('#filter-results').html('<img src="' + user.img + '">');
+		    		});
+		    	
     			$('#filter-results').html('<a href="" id="worker-modal">' + worker.name + '</a>');
+    			
     				$('#worker-modal').click(function (event) {
     					event.preventDefault();
     					$('#worker-info').html('<p>' + worker.name + '</p>');

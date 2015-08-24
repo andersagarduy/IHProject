@@ -134,15 +134,3 @@ function displayMap(lat, lon) {
   $('.search-form').addClass("hideForm")
   $('#map').addClass("showMap")
 }
-
-
-
-
-
-
-
-
-
-
-
-
