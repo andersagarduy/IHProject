@@ -10,6 +10,10 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
+			<div id="back-to-search">
+				<a href="/" id="back-link"> < Back to Search</a>	
+			</div>
+
 			<div id="cowork-characteristics"><%= @cowork.characteristics.html_safe %></div>
 
 			<div id="cowork-logo">
@@ -25,9 +29,7 @@
 					<strong>Details: </strong>
 				</div>
 					
-				<a class="expander" href="">Read More!</a>
-					
-				<div class="content">
+				<div>
 					<%= @cowork.description.html_safe %>
 				</div>
 			</div>	
@@ -61,7 +63,10 @@
 				<div>
 					<strong>Companies: </strong>
 				</div>	
-				<div><%= @cowork.companies.html_safe %></div>
+				<div>
+					<div>
+					<%= @cowork.companies.html_safe %>
+				</div>
 			</div>		
 		</div>
 	</div>
@@ -138,8 +143,36 @@
 					<p class="copyright">2015 | All Rights Reserved to <a href="http://chameleonstudios.es/">Chameleon Studios</a></p>
 			</div>		
 			<div class="col-md-7">
-					<a href="https://www.facebook.com/chameleonstudiosbilbao?fref=ts" class="social-icons">
-					<img src="/assets/flat-icon-facebook-150x15.jpg" border="0" onmouseover="this.src='http://6znr8g7i2u1e6urycg61i18w.wpengine.netdna-cdn.com/wp-content/uploads/2013/12/flat-icon-facebook-150x150.png'" onmouseout="this.src='/assets/flat-icon-facebook-150x15.jpg'", width="40" height="40" class="social-icons" /></a>
+					<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+					<div id="social-icons">
+						<a href="https://www.facebook.com/chameleonstudiosbilbao?fref=ts">
+							<div class="icon facebook">&#xf09a;</div>
+						</a>
+
+						<a href="https://twitter.com/ASagarduy">
+							<div class="icon twitter">&#xf099;</div>
+						</a>
+
+						<a href="https://es.linkedin.com/in/andersagarduy">	
+							<div class="icon linkedin">&#xf0e1;</div>
+						</a>
+					</div>
+
+					<div id="contact">
+						<p class="contact-info"><strong><h4>Contact Us:</h4></strong></p>
+						
+						<div class="contact-info">
+							<img src="http://westhigh64.com/wp-content/uploads/2014/02/geo_icon.png">
+							<p class="contact-info">C/ Uribitarte, 6 ·48001 Bilbao (Spain)</p>
+						</div>
+
+						<div class="contact-info">
+							<img src="https://cdn2.iconfinder.com/data/icons/ios-7-style-metro-ui-icons/512/MetroUI_Phone.png">
+							<p>+34 695 758 455</p>
+						</div>
+
+					</div>
 			</div>	
 		</div>	
 	</div>	

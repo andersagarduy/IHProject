@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
 #search-button {
 	height: 45px;	
 }
@@ -47,13 +51,56 @@
 	margin: 50px 0px 0px 0px;
 }
 
+#back-to-search {
+    background-color: white;
+   	margin-left: 0px;
+   	margin-right: -45px; 
+   	margin-top: 15px;	
+}
+
+#back-link {
+	margin: 0px 0px 0px 30px;
+}
+
 .hideForm {
 	z-index: 1;
 	display: none;
 }
 
 .showMap {
+	z-index: 3;
+}
+
+.hideHome {
 	z-index: 2;
+	display: none;
+}
+
+.showHeader {
+	z-index: 4;
+}
+
+#social-icons {
+	margin: 20px 0px 0px 0px;
+}
+
+#contact {
+	margin-top: -15px;
+	margin-right: 27px;
+	float: right;
+}
+
+.contact-info img {
+	width: 20px;
+	margin: 0px 0px -35px 0px;
+}
+
+.contact-info p {
+	margin: 0px 18px -15px 27px;
+}
+
+.contact-info {
+	margin: 7px 66px 16px 0px;
 }
 
 #gallery {
@@ -75,6 +122,7 @@
 }
 
 .info-box div {
+	text-align: center;	
 	color: #746e65;
 	font-weight: 300;
 	padding: 5px 5px 5px 5px;
@@ -88,10 +136,32 @@
     letter-spacing: 0
 }
 
+.info-titles {
+	text-align: left;
+}
+
 .row {
 	background-color: #E6E6E6;
    	margin-left: -15px;
-   	margin-right: -15px; 	 	
+   	margin-right: -45px; 	 	
+}
+
+.header-row {
+	background-color: white; 
+}
+
+#main-slide {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main-icons {
+	margin: 130px 0px 0px 165px;
+	display: inline-block;
+}
+
+.main-icons h2 {
+	margin: 0px 0px 40px 30px;
 }
 
 #back-header-img {
@@ -101,17 +171,18 @@
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-top: -20px;
 }
 
 #top_bar {
-	margin: 35px 50px 0px 0px;
+	margin: 20px 70px 0px 0px;
 	z-index: 2;
 	position: absolute;
 	right: 0;
 }
 
 #map {
-	z-index: 1;
+
 }
 
 #back-header-img h1 {
@@ -132,6 +203,9 @@
 	word-wrap: break-word;
     word-break: break-word;	
     background-color: white;
+   	margin-left: -15px;
+   	margin-right: -45px; 
+   	margin-top: -35px;   
 }
 
 .col-md-12 {
@@ -147,6 +221,10 @@
 	font-weight: 300;
 	font-size: 1.2rem;	
 	text-align: center;
+}
+
+#header {
+
 }
 
 .container {
@@ -165,6 +243,8 @@
 	text-align: center;
 	background-color: white;
 	padding-bottom: 50px;
+	margin-left: -15px;
+   	margin-right: -45px;
 }
 
 #cowork-logo img {
@@ -175,12 +255,12 @@
 	background-color: #E6E6E6;
 }
 
-.social-icons {
-	margin: 70px 350px 20px 0px;
-}
-
 .footer-logo {
 	margin: 40px 0px 0px 100px;
+}
+
+.header-logo {
+	margin: 15px 0px 15px 40px;
 }
 
 .copyright {
@@ -221,7 +301,58 @@
 	margin: 180px 0px 0px 0px;
 }
 
-* {
-	padding: 0;
-	margin: 0;
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+}
+
+body{
+	background-color: #eee;
+}
+			
+.icon {
+	width: 60px;
+	height: 60px;
+	margin: 50px 0px 0px 0px;
+  	position: relative;
+	float: left;
+	overflow: hidden;
+	line-height: 65px;
+	text-align: center;
+	color: white;
+	font-family: 'FontAwesome';
+	font-size: 35px;
+	text-align: center;
+}
+
+.facebook{
+	text-shadow: 40px 40px 0 #1a336f, 39px 39px 0 #1a336f, 38px 38px 0 #1a336f, 37px 37px 0 #1a336f, 36px 36px 0 #1a336f, 35px 35px 0 #1a336f, 34px 34px 0 #1a336f, 33px 33px 0 #1a336f, 32px 32px 0 #1a336f, 31px 31px 0 #1a336f, 30px 30px 0 #1a336f, 29px 29px 0 #1a336f, 28px 28px 0 #1a336f, 27px 27px 0 #1a336f, 26px 26px 0 #1a336f, 25px 25px 0 #1a336f, 24px 24px 0 #1a336f, 23px 23px 0 #1a336f, 22px 22px 0 #1a336f, 21px 21px 0 #1a336f, 20px 20px 0 #1a336f, 19px 19px 0 #1a336f, 18px 18px 0 #1a336f, 17px 17px 0 #1a336f, 16px 16px 0 #1a336f, 15px 15px 0 #1a336f, 14px 14px 0 #1a336f, 13px 13px 0 #1a336f, 12px 12px 0 #1a336f, 11px 11px 0 #1a336f, 10px 10px 0 #1a336f, 9px 9px 0 #1a336f, 8px 8px 0 #1a336f, 7px 7px 0 #1a336f, 6px 6px 0 #1a336f, 5px 5px 0 #1a336f, 4px 4px 0 #1a336f, 3px 3px 0 #1a336f, 2px 2px 0 #1a336f, 1px 1px 0 #1a336f;
+	background-color: #2850ad;
+}
+
+.facebook:hover {
+	opacity: 0.9;
+}
+			
+.twitter{
+	text-shadow: 40px 40px 0 #28a6e6, 39px 39px 0 #28a6e6, 38px 38px 0 #28a6e6, 37px 37px 0 #28a6e6, 36px 36px 0 #28a6e6, 35px 35px 0 #28a6e6, 34px 34px 0 #28a6e6, 33px 33px 0 #28a6e6, 32px 32px 0 #28a6e6, 31px 31px 0 #28a6e6, 30px 30px 0 #28a6e6, 29px 29px 0 #28a6e6, 28px 28px 0 #28a6e6, 27px 27px 0 #28a6e6, 26px 26px 0 #28a6e6, 25px 25px 0 #28a6e6, 24px 24px 0 #28a6e6, 23px 23px 0 #28a6e6, 22px 22px 0 #28a6e6, 21px 21px 0 #28a6e6, 20px 20px 0 #28a6e6, 19px 19px 0 #28a6e6, 18px 18px 0 #28a6e6, 17px 17px 0 #28a6e6, 16px 16px 0 #28a6e6, 15px 15px 0 #28a6e6, 14px 14px 0 #28a6e6, 13px 13px 0 #28a6e6, 12px 12px 0 #28a6e6, 11px 11px 0 #28a6e6, 10px 10px 0 #28a6e6, 9px 9px 0 #28a6e6, 8px 8px 0 #28a6e6, 7px 7px 0 #28a6e6, 6px 6px 0 #28a6e6, 5px 5px 0 #28a6e6, 4px 4px 0 #28a6e6, 3px 3px 0 #28a6e6, 2px 2px 0 #28a6e6, 1px 1px 0 #28a6e6;
+	background-color: #29c5f6;
+}
+
+.twitter:hover {
+	opacity: 0.9;
+}
+
+.linkedin{
+	text-shadow: 40px 40px 0 #1b74c7, 39px 39px 0 #1b74c7, 38px 38px 0 #1b74c7, 37px 37px 0 #1b74c7, 36px 36px 0 #1b74c7, 35px 35px 0 #1b74c7, 34px 34px 0 #1b74c7, 33px 33px 0 #1b74c7, 32px 32px 0 #1b74c7, 31px 31px 0 #1b74c7, 30px 30px 0 #1b74c7, 29px 29px 0 #1b74c7, 28px 28px 0 #1b74c7, 27px 27px 0 #1b74c7, 26px 26px 0 #1b74c7, 25px 25px 0 #1b74c7, 24px 24px 0 #1b74c7, 23px 23px 0 #1b74c7, 22px 22px 0 #1b74c7, 21px 21px 0 #1b74c7, 20px 20px 0 #1b74c7, 19px 19px 0 #1b74c7, 18px 18px 0 #1b74c7, 17px 17px 0 #1b74c7, 16px 16px 0 #1b74c7, 15px 15px 0 #1b74c7, 14px 14px 0 #1b74c7, 13px 13px 0 #1b74c7, 12px 12px 0 #1b74c7, 11px 11px 0 #1b74c7, 10px 10px 0 #1b74c7, 9px 9px 0 #1b74c7, 8px 8px 0 #1b74c7, 7px 7px 0 #1b74c7, 6px 6px 0 #1b74c7, 5px 5px 0 #1b74c7, 4px 4px 0 #1b74c7, 3px 3px 0 #1b74c7, 2px 2px 0 #1b74c7, 1px 1px 0 #1b74c7;
+	background-color: #3a9bdc;
+}
+
+.linkedin:hover {
+	opacity: 0.9;
 }

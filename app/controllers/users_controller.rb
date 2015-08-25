@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   	end
 
     def index
-      @users = User.where('name = ? && job = ?', params[:Name],  params[:Job])
+      @users = User.where("lower(name) = ? AND lower(job) = ?", params[:Name].downcase,  params[:Job].downcase)
     end
 
   	private

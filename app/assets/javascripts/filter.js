@@ -4,7 +4,7 @@ $(document).ready(function() {
 		var formObj = $(this);
 		var formURL = formObj.attr("action");
 		var formData = formObj.serializeArray();
-		
+
 		$.ajaxSetup({
 		  headers: {
 		    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
@@ -28,8 +28,18 @@ $(document).ready(function() {
 
 		    	data.forEach(function(worker){
 		    		
-		    		$.post("/user_json.json", formData, function(user){
-      					$('#filter-results').html('<img src="' + user.img + '">');
+		    		$.ajax({
+		    			url: "/user_json.json", 
+		    			type: 'POST',
+		    			data: formData, 
+		    			success: function(data) 
+		    			{
+		    				console.log(data);
+
+		    				data.users.forEach(function(user) {
+		    					$('#filter-results').html('<img src="' + user.img + '">');
+		    				});
+		    			}
 		    		});
 		    	
     			$('#filter-results').html('<a href="" id="worker-modal">' + worker.name + '</a>');

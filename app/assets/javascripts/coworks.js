@@ -52,6 +52,9 @@
 
   $('.search-form').addClass("hideForm")
   $('#map').addClass("showMap")
+  $('.header-row').addClass("hideHome")
+  $('.header').addClass("showHeader")
+  $('#map').toggle();
 }); 
 
 
