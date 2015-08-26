@@ -19,11 +19,11 @@ $(document).ready(function() {
 		    {
 		    	console.log(data);
 		
-		    	if (data != 'object') {
-					$('#filter-errors').html('<p>' + "Error, Usuario No Existe!" + '</p>')
+		    	if (data.length == 0) {
+					$('#filter-errors').html('<p>' + "¡Error, Usuario No Existe!" + '</p>')
 					setTimeout(function () {
-					$('#filter-errors').remove();
-				    }, 5000);	
+					$('#filter-errors').html('');
+				    }, 2000);	
 				}
 
 		    	data.forEach(function(worker){
