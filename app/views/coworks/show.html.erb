@@ -12,7 +12,13 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div id="back-to-search">
-				<a href="/coworks" id="back-link"> < Back to Search</a>	
+				<a href="/coworks" class="back-link hideBack"> < Back to Search</a>
+				<% if user_signed_in? %>
+				<a href="/" class="back-link"> < Back to Search</a>
+					<script type="text/javascript">
+					$('.hideBack').toggle();
+					</script>
+				<% end %>	
 			</div>
 
 			<div id="cowork-characteristics"><%= @cowork.characteristics.html_safe %></div>
