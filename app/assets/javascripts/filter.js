@@ -26,25 +26,30 @@ $(document).ready(function() {
 				    }, 2000);	
 				}
 
+
+		    	$.ajax({
+		    		url: "/user_json.json", 
+		    		type: 'POST',
+		    		data: formData, 
+		    		success: function(data) 
+		    		{
+		    			console.log(data);
+
+	    				data.users.forEach(function(user) {
+	    					$('.filter-results').append('<img src="' + user.img + '" class="user-display-filter">');
+		    					
+	    				});
+	    			}
+	    		});
+
+
 		    	data.forEach(function(worker){
 		    		
-		    		$.ajax({
-		    			url: "/user_json.json", 
-		    			type: 'POST',
-		    			data: formData, 
-		    			success: function(data) 
-		    			{
-		    				console.log(data);
 
-		    				data.users.forEach(function(user) {
-		    					$('#filter-results').html('<img src="' + user.img + '">');
-		    				});
-		    			}
-		    		});
 		    	
-    			$('#filter-results').html('<a href="" id="worker-modal">' + worker.name + '</a>');
+    			$('.filter-results-2').append('<a href="" class="worker-modal">' + worker.name + '</a>');
     			
-    				$('#worker-modal').click(function (event) {
+    				$('.worker-modal').click(function (event) {
     					event.preventDefault();
     					$('#worker-info').html('<p>' + worker.name + '</p>');
     					$('#worker-job').html('- Job: ' + '<p>' + worker.job + '</p>');
