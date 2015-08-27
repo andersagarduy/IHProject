@@ -34,7 +34,7 @@ Cowork.create characteristics: "1 Room ·20 Desks ·80m2 <br> Prosperidad, Madri
 																								  to present new projects, products, networking eventos, etc. <br>
 																								Business services: Mentoring, consulting, internationalization, etc. <br>
 																								External services: Catering, courier service, printing service, <br> 
-																								virtual secretary, car-sharing, computer service.", services: "Coffee/ Tea/ Filtered Water <br> WiFi <br> Wheelchair Accessible <br> Shared Kitchen <br> Meeting Rooms <br> Mail Service <br> Vending machine", companies: "Cocouse Comparko Tangram Welcome Innovation Chameleon Studios", latitude: "40.412741", longitude: "-3.705843", name: "Utopic_US"
+																								virtual secretary, car-sharing, computer service.", services: "Coffee/ Tea/ Filtered Water <br> WiFi <br> Wheelchair Accessible <br> Shared Kitchen <br> Meeting Rooms <br> Mail Service <br> Vending machine", companies: "Cocouse <br> Comparko <br> Tangram <br> Welcome Innovation <br> Chameleon Studios", latitude: "40.412741", longitude: "-3.705843", name: "Utopic_US"
 
 Cowork.create characteristics: "5 Rooms ·24 Desks ·24m2 <br> Madrid, Madrid", description: "Almirante 5, L´Espace, coworking located in one of the best streets <br>
 																							of Madrid, with very good accessibility and great atmosphere! <br>
@@ -45,16 +45,10 @@ Cowork.create characteristics: "5 Rooms ·24 Desks ·24m2 <br> Madrid, Madrid", 
 																							and for this we offer you over 200 m2 that merge seamlessly <br>
 																							with an avant-garde vintage items. <br>
 																							In the neighborhood of Justice, L'Espace Almirante 5 offers you the <br>
-																							possibility of having your own office at an affordable price", services: "Wi-Fi / Internet <br> Kitchen <br> Air Conditioner <br> 24/7 Available <br> Weelchair Accessible", companies: "Cocouse Comparko Tangram Welcome Innovation Chameleon Studios", latitude: "40.42259", longitude: "-3.69503", name: "Almirante 5, L´Espace"
+																							possibility of having your own office at an affordable price", services: "Wi-Fi / Internet <br> Kitchen <br> Air Conditioner <br> 24/7 Available <br> Weelchair Accessible", companies: "Cocouse <br> Comparko <br> Tangram <br> Welcome Innovation <br> Chameleon Studios", latitude: "40.42259", longitude: "-3.69503", name: "Almirante 5, L´Espace"
 
 
 
-
-paul, alia, leto = User.create([
-  {name: 'Paul Atreides',  email: 'paul@arrakis.com', password: 'ironhack', password_confirmation: 'ironhack'},
-  {name: 'Alia Atreides',  email: 'alia@arrakis.com',  password: 'ironhack', password_confirmation: 'ironhack'},
-  {name: 'Leto Atreides', email: 'leto@arrakis.com',  password: 'ironhack', password_confirmation: 'ironhack'}
-])
 
 
 

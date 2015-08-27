@@ -36,6 +36,19 @@
 	text-align: center;
 }
 
+.sign_up {
+	margin: 17px 0px 17px 0px;
+}
+
+.registration_button input[type=submit] {
+	height: 30px;
+	width: 85px;	
+    border-radius: 10px;
+    background-color: rgb(15, 108, 197);
+    color: white;
+    font-size: medium;	
+}
+
 .filter-results {
 	display: inline-block;
 	margin: 150px 0px 0px 150px;
@@ -131,7 +144,7 @@
 	background-clip: content-box;
 	word-break: break-all;
 	display: inline-block;
-	border-radius: 5px;	
+	border-radius: 10px;	
 }
 
 .info-box div {
@@ -348,7 +361,19 @@
 
 .login_signin {
 	text-align: center;
-	margin: 180px 0px 0px 0px;
+	max-width: 300px;
+ 	padding: 19px 29px 29px;
+  	margin: 0 auto 20px;
+  	margin-top: 110px;
+  	background-color: #fff;
+  	border: 3px solid #4D4D4D;
+  	-webkit-border-radius: 5px;
+    -moz-border-radius: 10px;
+          border-radius: 10px;
+  	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    background: url("/assets/office1.jpg");      
 }
 
 *{

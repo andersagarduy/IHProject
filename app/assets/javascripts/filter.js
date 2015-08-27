@@ -44,11 +44,8 @@ $(document).ready(function() {
 
 
 		    	data.forEach(function(worker){
-		    		
-
-		    	
     			$('.filter-results-2').append('<a href="" class="worker-modal">' + worker.name + '</a>');
-    			
+
     				$('.worker-modal').click(function (event) {
     					event.preventDefault();
     					$('#worker-info').html('<p>' + worker.name + '</p>');
